@@ -15,8 +15,23 @@ for (var i = 1; i <= 100; i++) {
 
 document.write(numbersList);
 
-// var divisibleByThree = (i % 3 === 0); //need to add something that replaces the elements of the array that resolve true
+// var divisibleByThree = (i % 3 === 0); 
 
-// var divisibleByFive = numbersList(i % 5 === 0); //need to add something that replaces the elements of the array that resolve true 
+// var divisibleByFive = numbersList(i % 5 === 0); 
 
+function divisibles (numbersList) {
+	for (var i = 1; i <= numbersList.length; i++) {
+		if (numbersList[i] % 3 === 0 && numbersList[i] % 5 === 0) {
+		numbersList.splice(i, 1, 'fizzBuzz')
+		} 	
+		else if (numbersList[i] % 3 === 0) {
+		numbersList.splice(i, 1, 'fizz')
+		} 	
+		else if (numbersList[i] % 5 === 0) {
+		numbersList.splice(i, 1, 'buzz')
+		}
+	} return numbersList;
+}
+
+console.log(divisibles(numbersList));
 
